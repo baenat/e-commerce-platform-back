@@ -1,101 +1,245 @@
 <div align="center">
 
-# E-commerce Platform
+# 🛒 E-commerce Platform
 
-<img alt="ReactJS" src="cart.png" width="100" /><br>
+<img alt="E-commerce Platform" src="cart.png" width="120" />
+
+**Una plataforma moderna de comercio electrónico construida con Node.js, Express y MongoDB**
 
 ![Node](https://img.shields.io/badge/Node%20js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 ![ExpressJs](https://img.shields.io/badge/Express%20js-000000?style=for-the-badge&logo=express&logoColor=white)
-![MongoBD](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
-![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)
-![GIT](https://img.shields.io/badge/Git-fc6d26?style=for-the-badge&logo=git&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 
-</div><br>
+[📖 Documentación API](https://documenter.getpostman.com/view/15768378/2sA3kPqk2j) • [💻 Frontend](https://github.com/baenat/e-commerce-platform-front)
 
-## Introducción
+</div>
 
-E-commerce Platform es una aplicación web de comercio electrónico que permite a los usuarios listar productos, editar, eliminar, añadir al carrito, y realizar pedidos. La plataforma está diseñada para ser escalable y fácilmente extensible, con características adicionales planificadas para futuras actualizaciones.
+---
 
-## Tabla de Contenidos
+## 📋 Tabla de Contenidos
 
-- [Características](#características)
-- [Tecnologías Utilizadas](#tecnologías-utilizadas)
-- [Instalación](#instalación)
-- [Uso](#uso)
-- [API REST](#api-rest)
-- [Frontend](https://github.com/baenat/e-commerce-platform-front)
+- [Descripción](#-descripción)
+- [Características](#-características)
+- [Tecnologías](#️-tecnologías)
+- [Instalación](#-instalación)
+- [Configuración](#️-configuración)
+- [Uso](#-uso)
+- [API Endpoints](#-api-endpoints)
+- [Estructura del Proyecto](#-estructura-del-proyecto)
+- [Contribuir](#-contribuir)
 
-## Características
+---
 
-- **Lista de Productos**: Visualiza todos los productos disponibles.
-- **CRUD de Productos**: Crear, leer, actualizar y eliminar productos.
-- **Carrito de Compras**: Añadir productos al carrito y gestionar su contenido.
-- **Gestión de Órdenes**: Realiza y administra pedidos.
+## 🎯 Descripción
 
-## Tecnologías Utilizadas
+E-commerce Platform es una API RESTful robusta y escalable para gestionar operaciones de comercio electrónico. Proporciona funcionalidades completas para la gestión de productos, carritos de compra y procesamiento de pedidos.
 
-### Backend
-- **Servidor**: Node.js con Express
-- **Lenguaje**: TypeScript
-- **Base de Datos**: MongoDB
+### ¿Por qué usar esta plataforma?
 
-## Instalación
+✨ **Escalable** - Arquitectura diseñada para crecer con tu negocio  
+🚀 **Moderna** - Desarrollada con las últimas tecnologías  
+📦 **Completa** - Todo lo necesario para un e-commerce funcional  
+🔧 **Extensible** - Fácil de personalizar y ampliar
+
+---
+
+## ⚡ Características
+
+- ✅ **Gestión Completa de Productos** (CRUD)
+- 🛍️ **Sistema de Carrito de Compras**
+<!-- - 📦 **Procesamiento de Órdenes** -->
+<!-- - 🔍 **Búsqueda y Filtrado de Productos** -->
+- 📊 **Base de Datos MongoDB**
+<!-- - 🔒 **API REST Segura** -->
+<!-- - 📝 **Documentación Completa** -->
+
+---
+
+## 🛠️ Tecnologías
+
+| Tecnología | Propósito |
+|------------|-----------|
+| **Node.js** | Runtime de JavaScript |
+| **Express** | Framework web |
+| **TypeScript** | Tipado estático |
+| **MongoDB** | Base de datos NoSQL |
+| **NPM** | Gestor de paquetes |
+
+---
+
+## 🚀 Instalación
 
 ### Prerrequisitos
 
-- Node.js (versión 14 o superior)
-- MongoDB (versión 4.4 o superior)
+Antes de comenzar, asegúrate de tener instalado:
 
-### Clonar el Repositorio
+- **Node.js** ≥ 14.0.0 ([Descargar](https://nodejs.org/))
+- **MongoDB** ≥ 4.4.0 ([Descargar](https://www.mongodb.com/try/download/community))
+- **npm** o **yarn**
 
-```sh
-git clone https://github.com/tu-usuario/e-commerce-platform.git
-cd e-commerce-platform
+### Pasos de Instalación
+
+1️⃣ **Clonar el repositorio**
+
+```bash
+git clone https://github.com/baenat/e-commerce-platform-back.git
+cd e-commerce-platform-back
 ```
 
-### Instalación de Dependencias
+2️⃣ **Instalar dependencias**
 
-#### Backend
-
-```sh
-cd backend
+```bash
 npm install
 ```
 
-## Uso
+3️⃣ **Configurar variables de entorno**
 
-### Backend
+Crea un archivo `.env` en la raíz del proyecto:
 
-```sh
-cd backend
+```env
+PORT=3000
+MONGODB_URI=mongodb://localhost:3000/
+APP_VERSION=development
+```
+
+---
+
+## ⚙️ Configuración
+
+### Variables de Entorno
+
+| Variable | Descripción | Valor por Defecto |
+|----------|-------------|-------------------|
+| `PORT` | Puerto del servidor | `3000` |
+| `MONGODB_URI` | URI de conexión a MongoDB | `mongodb://localhost:3000/` |
+| `APP_VERSION` | Versión | `1` |
+
+---
+
+## 💻 Uso
+
+### Modo Desarrollo
+
+```bash
 npm run dev
 ```
 
-El backend estará disponible en `http://localhost:3000`.
+### Modo Producción
 
-## API REST
+```bash
+npm run build
+npm start
+```
 
-### Productos
+El servidor estará disponible en: **`http://localhost:3000`**
 
-- **GET /api/products**: Lista todos los productos.
-- **GET /api/products/:id**: Obtiene un producto específico.
-- **POST /api/products**: Crea un nuevo producto.
-- **PUT /api/products/:id**: Actualiza un producto existente.
-- **DELETE /api/products/:id**: Elimina un producto.
+### Verificar que funciona
 
-### Órdenes
+```bash
+curl http://localhost:3000/
+```
 
-- **GET /api/orders**: Lista todas las órdenes.
-- **GET /api/orders/:id**: Obtiene una orden específica.
-- **POST /api/orders**: Crea una nueva orden.
-- **PUT /api/orders/:id**: Actualiza una orden existente.
-- **DELETE /api/orders/:id**: Elimina una orden.
+**Respuesta esperada:**
 
+```json
+{
+  "message": "Available Endpoints",
+  "endpoints": {
+    "products": "/api/v1/products",
+    "orders": "/api/v1/orders"
+  }
+}
+```
 
-### Documentación
+---
 
-Para obtener documentación detallada sobre la API, consulte la colección Postman [E-commerce Platform API](https://documenter.getpostman.com/view/15768378/2sA3kPqk2j).
+## 📡 API Endpoints
 
-<div class="footer" align="right">
-    &copy; 2024 Baenat
+### 🏠 Ruta Principal
+
+```http
+GET /
+```
+
+Retorna la lista de endpoints disponibles.
+
+### 📦 Productos
+
+| Método | Endpoint | Descripción |
+|--------|----------|-------------|
+| `GET` | `/api/v1/products` | Lista todos los productos |
+| `GET` | `/api/v1/products/:id` | Obtiene un producto específico |
+| `POST` | `/api/v1/products` | Crea un nuevo producto |
+| `PUT` | `/api/v1/products/:id` | Actualiza un producto |
+| `DELETE` | `/api/v1/products/:id` | Elimina un producto |
+
+### 📋 Órdenes
+
+| Método | Endpoint | Descripción |
+|--------|----------|-------------|
+| `GET` | `/api/v1/orders` | Lista todas las órdenes |
+| `GET` | `/api/v1/orders/:id` | Obtiene una orden específica |
+| `POST` | `/api/v1/orders` | Crea una nueva orden |
+| `PUT` | `/api/v1/orders/:id` | Actualiza una orden |
+| `DELETE` | `/api/v1/orders/:id` | Elimina una orden |
+
+### 📖 Documentación Completa
+
+Para ejemplos detallados, esquemas de datos y pruebas de endpoints, consulta la [Documentación Completa de Postman](https://documenter.getpostman.com/view/15768378/2sA3kPqk2j).
+
+---
+
+## 📁 Estructura del Proyecto
+
+```
+e-commerce-platform-back/
+├── src/
+│   ├── controllers/     # Lógica de controladores
+│   ├── database/        # Conexión MongoDB
+│   ├── models/          # Modelos de MongoDB
+│   ├── routes/          # Definición de rutas
+│   ├── utils/           # Utils
+│   └── index.ts         # Punto de entrada
+├── .env                 # Variables de entorno
+├── package.json
+├── tsconfig.json
+└── README.md
+```
+
+---
+
+## 🤝 Contribuir
+
+Las contribuciones son bienvenidas. Para cambios importantes:
+
+1. Fork el proyecto
+2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
+3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
+
+---
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT.
+
+---
+
+## 🔗 Enlaces Útiles
+
+- [🌐 Frontend del Proyecto](https://github.com/baenat/e-commerce-platform-front)
+- [📚 Documentación API (Postman)](https://documenter.getpostman.com/view/15768378/2sA3kPqk2j)
+- [📖 Documentación de Express](https://expressjs.com/)
+- [📖 Documentación de MongoDB](https://docs.mongodb.com/)
+
+---
+
+<div align="center">
+
+**Desarrollado con ❤️ por [Baenat](https://github.com/baenat)**
+
+⭐ Si te gusta este proyecto, ¡dale una estrella!
+
 </div>
