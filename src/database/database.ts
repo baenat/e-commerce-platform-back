@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const dbConnect = (): Promise<any> => {
-  const DB_URI = process.env.BD_URI;
+  const DB_URI = process.env.MONGODB_URI;
 
   return new Promise<boolean>((resolve, reject) => {
     mongoose.connect(DB_URI, {
